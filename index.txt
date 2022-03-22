@@ -1,0 +1,1309 @@
+Microsoft Windows [Version 10.0.22000.588]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Lenovo>mongo
+MongoDB shell version v5.0.6
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("01bae6c4-28d7-43b0-a9b0-6ca207e5a383") }
+MongoDB server version: 5.0.6
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting:
+        2022-03-18T11:51:28.763+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show  dbs
+admin       0.000GB
+assignment  0.000GB
+config      0.000GB
+day_5       0.000GB
+local       0.000GB
+> use day_5
+switched to db day_5
+> show collections
+assign
+users
+> db.assign.find({}).pretty()
+{
+        "_id" : ObjectId("62388454970c29f593c31195"),
+        "movie_name" : "Gasoline (Benzina)",
+        "movie_genre" : "Crime",
+        "budget" : 13889,
+        "production_year" : 1995
+}
+{
+        "_id" : ObjectId("62388454970c29f593c31196"),
+        "movie_name" : "Bill Bailey: Tinselworm",
+        "movie_genre" : "Comedy|Documentary",
+        "budget" : 15590,
+        "production_year" : 2011
+}
+{
+        "_id" : ObjectId("62388454970c29f593c31197"),
+        "movie_name" : "Human Centipede II (Full Sequence), The",
+        "movie_genre" : "Horror",
+        "budget" : 13612,
+        "production_year" : 2005
+}
+{
+        "_id" : ObjectId("62388454970c29f593c31198"),
+        "movie_name" : "True Crime",
+        "movie_genre" : "Crime|Thriller",
+        "budget" : 18227,
+        "production_year" : 2003
+}
+{
+        "_id" : ObjectId("62388454970c29f593c31199"),
+        "movie_name" : "Backtrack (Catchfire)",
+        "movie_genre" : "Action|Drama|Thriller",
+        "budget" : 12756,
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119a"),
+        "movie_name" : "Return of the Living Dead Part II",
+        "movie_genre" : "Comedy|Horror",
+        "budget" : 17147,
+        "production_year" : 1996
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119b"),
+        "movie_name" : "So Much Water",
+        "movie_genre" : "Comedy|Drama",
+        "budget" : 13877,
+        "production_year" : 2008
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119c"),
+        "movie_name" : "Like Water for Chocolate (Como agua para chocolate)",
+        "movie_genre" : "Drama|Fantasy|Romance",
+        "budget" : 17297,
+        "production_year" : 2003
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119d"),
+        "movie_name" : "Vääpeli Körmy ja marsalkan sauva",
+        "movie_genre" : "Comedy",
+        "budget" : 15132,
+        "production_year" : 1994
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119e"),
+        "movie_name" : "Pacific Heights",
+        "movie_genre" : "Mystery|Thriller",
+        "budget" : 15803,
+        "production_year" : 2018
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119f"),
+        "movie_name" : "Two Deaths",
+        "movie_genre" : "Drama",
+        "budget" : 11904,
+        "production_year" : 2017
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a0"),
+        "movie_name" : "Vengeance: The Story of Tony Cimo",
+        "movie_genre" : "(no genres listed)",
+        "budget" : 14517,
+        "production_year" : 2007
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a1"),
+        "movie_name" : "Star Trek III: The Search for Spock",
+        "movie_genre" : "Action|Adventure|Sci-Fi",
+        "budget" : 16178,
+        "production_year" : 2000
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a2"),
+        "movie_name" : "Young Master, The (Shi di chu ma)",
+        "movie_genre" : "Action|Comedy",
+        "budget" : 19067,
+        "production_year" : 1990
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a3"),
+        "movie_name" : "Operación Cannabis",
+        "movie_genre" : "Action|Adventure|Comedy|Crime",
+        "budget" : 19328,
+        "production_year" : 2013
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a4"),
+        "movie_name" : "Seraphim Falls",
+        "movie_genre" : "Action|Adventure|Drama|War|Western",
+        "budget" : 18725,
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a5"),
+        "movie_name" : "Malibu High",
+        "movie_genre" : "Comedy|Crime",
+        "budget" : 17550,
+        "production_year" : 2017
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a6"),
+        "movie_name" : "M",
+        "movie_genre" : "Crime|Film-Noir|Thriller",
+        "budget" : 10279,
+        "production_year" : 2019
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a7"),
+        "movie_name" : "Home Fries",
+        "movie_genre" : "Comedy|Romance",
+        "budget" : 16587,
+        "production_year" : 2016
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a8"),
+        "movie_name" : "Last Exit",
+        "movie_genre" : "Crime|Drama|Thriller",
+        "budget" : 15679,
+        "production_year" : 2009
+}
+Type "it" for more
+> db.assign.find({},{"movie_name":1}).pretty()
+{
+        "_id" : ObjectId("62388454970c29f593c31195"),
+        "movie_name" : "Gasoline (Benzina)"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c31196"),
+        "movie_name" : "Bill Bailey: Tinselworm"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c31197"),
+        "movie_name" : "Human Centipede II (Full Sequence), The"
+}
+{ "_id" : ObjectId("62388454970c29f593c31198"), "movie_name" : "True Crime" }
+{
+        "_id" : ObjectId("62388454970c29f593c31199"),
+        "movie_name" : "Backtrack (Catchfire)"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119a"),
+        "movie_name" : "Return of the Living Dead Part II"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119b"),
+        "movie_name" : "So Much Water"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119c"),
+        "movie_name" : "Like Water for Chocolate (Como agua para chocolate)"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119d"),
+        "movie_name" : "Vääpeli Körmy ja marsalkan sauva"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119e"),
+        "movie_name" : "Pacific Heights"
+}
+{ "_id" : ObjectId("62388454970c29f593c3119f"), "movie_name" : "Two Deaths" }
+{
+        "_id" : ObjectId("62388454970c29f593c311a0"),
+        "movie_name" : "Vengeance: The Story of Tony Cimo"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a1"),
+        "movie_name" : "Star Trek III: The Search for Spock"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a2"),
+        "movie_name" : "Young Master, The (Shi di chu ma)"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a3"),
+        "movie_name" : "Operación Cannabis"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a4"),
+        "movie_name" : "Seraphim Falls"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a5"),
+        "movie_name" : "Malibu High"
+}
+{ "_id" : ObjectId("62388454970c29f593c311a6"), "movie_name" : "M" }
+{ "_id" : ObjectId("62388454970c29f593c311a7"), "movie_name" : "Home Fries" }
+{ "_id" : ObjectId("62388454970c29f593c311a8"), "movie_name" : "Last Exit" }
+Type "it" for more
+> db.assing.find({},{"movie_name:1","_id":0,"production_years":1}).pretty()
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:33
+> db.assing.find({},{"movie_name:1","_id":1,"production_years":1}).pretty()
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:33
+> db.assing.find({},{"movie_name:1","production_years":1}).pretty()
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:33
+> db.assing.find({},{"movie_name:1","production_years":1})
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:33
+> db.assing.find({},{movie_name:1}).pretty()
+> db.assign.find({}).pretty()
+{
+        "_id" : ObjectId("62388454970c29f593c31195"),
+        "movie_name" : "Gasoline (Benzina)",
+        "movie_genre" : "Crime",
+        "budget" : 13889,
+        "production_year" : 1995
+}
+{
+        "_id" : ObjectId("62388454970c29f593c31196"),
+        "movie_name" : "Bill Bailey: Tinselworm",
+        "movie_genre" : "Comedy|Documentary",
+        "budget" : 15590,
+        "production_year" : 2011
+}
+{
+        "_id" : ObjectId("62388454970c29f593c31197"),
+        "movie_name" : "Human Centipede II (Full Sequence), The",
+        "movie_genre" : "Horror",
+        "budget" : 13612,
+        "production_year" : 2005
+}
+{
+        "_id" : ObjectId("62388454970c29f593c31198"),
+        "movie_name" : "True Crime",
+        "movie_genre" : "Crime|Thriller",
+        "budget" : 18227,
+        "production_year" : 2003
+}
+{
+        "_id" : ObjectId("62388454970c29f593c31199"),
+        "movie_name" : "Backtrack (Catchfire)",
+        "movie_genre" : "Action|Drama|Thriller",
+        "budget" : 12756,
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119a"),
+        "movie_name" : "Return of the Living Dead Part II",
+        "movie_genre" : "Comedy|Horror",
+        "budget" : 17147,
+        "production_year" : 1996
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119b"),
+        "movie_name" : "So Much Water",
+        "movie_genre" : "Comedy|Drama",
+        "budget" : 13877,
+        "production_year" : 2008
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119c"),
+        "movie_name" : "Like Water for Chocolate (Como agua para chocolate)",
+        "movie_genre" : "Drama|Fantasy|Romance",
+        "budget" : 17297,
+        "production_year" : 2003
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119d"),
+        "movie_name" : "Vääpeli Körmy ja marsalkan sauva",
+        "movie_genre" : "Comedy",
+        "budget" : 15132,
+        "production_year" : 1994
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119e"),
+        "movie_name" : "Pacific Heights",
+        "movie_genre" : "Mystery|Thriller",
+        "budget" : 15803,
+        "production_year" : 2018
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119f"),
+        "movie_name" : "Two Deaths",
+        "movie_genre" : "Drama",
+        "budget" : 11904,
+        "production_year" : 2017
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a0"),
+        "movie_name" : "Vengeance: The Story of Tony Cimo",
+        "movie_genre" : "(no genres listed)",
+        "budget" : 14517,
+        "production_year" : 2007
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a1"),
+        "movie_name" : "Star Trek III: The Search for Spock",
+        "movie_genre" : "Action|Adventure|Sci-Fi",
+        "budget" : 16178,
+        "production_year" : 2000
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a2"),
+        "movie_name" : "Young Master, The (Shi di chu ma)",
+        "movie_genre" : "Action|Comedy",
+        "budget" : 19067,
+        "production_year" : 1990
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a3"),
+        "movie_name" : "Operación Cannabis",
+        "movie_genre" : "Action|Adventure|Comedy|Crime",
+        "budget" : 19328,
+        "production_year" : 2013
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a4"),
+        "movie_name" : "Seraphim Falls",
+        "movie_genre" : "Action|Adventure|Drama|War|Western",
+        "budget" : 18725,
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a5"),
+        "movie_name" : "Malibu High",
+        "movie_genre" : "Comedy|Crime",
+        "budget" : 17550,
+        "production_year" : 2017
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a6"),
+        "movie_name" : "M",
+        "movie_genre" : "Crime|Film-Noir|Thriller",
+        "budget" : 10279,
+        "production_year" : 2019
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a7"),
+        "movie_name" : "Home Fries",
+        "movie_genre" : "Comedy|Romance",
+        "budget" : 16587,
+        "production_year" : 2016
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a8"),
+        "movie_name" : "Last Exit",
+        "movie_genre" : "Crime|Drama|Thriller",
+        "budget" : 15679,
+        "production_year" : 2009
+}
+Type "it" for more
+> db.assign.find({},{"movie_name":1}).pretty()
+{
+        "_id" : ObjectId("62388454970c29f593c31195"),
+        "movie_name" : "Gasoline (Benzina)"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c31196"),
+        "movie_name" : "Bill Bailey: Tinselworm"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c31197"),
+        "movie_name" : "Human Centipede II (Full Sequence), The"
+}
+{ "_id" : ObjectId("62388454970c29f593c31198"), "movie_name" : "True Crime" }
+{
+        "_id" : ObjectId("62388454970c29f593c31199"),
+        "movie_name" : "Backtrack (Catchfire)"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119a"),
+        "movie_name" : "Return of the Living Dead Part II"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119b"),
+        "movie_name" : "So Much Water"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119c"),
+        "movie_name" : "Like Water for Chocolate (Como agua para chocolate)"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119d"),
+        "movie_name" : "Vääpeli Körmy ja marsalkan sauva"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119e"),
+        "movie_name" : "Pacific Heights"
+}
+{ "_id" : ObjectId("62388454970c29f593c3119f"), "movie_name" : "Two Deaths" }
+{
+        "_id" : ObjectId("62388454970c29f593c311a0"),
+        "movie_name" : "Vengeance: The Story of Tony Cimo"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a1"),
+        "movie_name" : "Star Trek III: The Search for Spock"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a2"),
+        "movie_name" : "Young Master, The (Shi di chu ma)"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a3"),
+        "movie_name" : "Operación Cannabis"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a4"),
+        "movie_name" : "Seraphim Falls"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a5"),
+        "movie_name" : "Malibu High"
+}
+{ "_id" : ObjectId("62388454970c29f593c311a6"), "movie_name" : "M" }
+{ "_id" : ObjectId("62388454970c29f593c311a7"), "movie_name" : "Home Fries" }
+{ "_id" : ObjectId("62388454970c29f593c311a8"), "movie_name" : "Last Exit" }
+Type "it" for more
+> db.assign.find({},{"movie_name":1},{"production_year":1}).pretty()
+{
+        "_id" : ObjectId("62388454970c29f593c31195"),
+        "movie_name" : "Gasoline (Benzina)"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c31196"),
+        "movie_name" : "Bill Bailey: Tinselworm"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c31197"),
+        "movie_name" : "Human Centipede II (Full Sequence), The"
+}
+{ "_id" : ObjectId("62388454970c29f593c31198"), "movie_name" : "True Crime" }
+{
+        "_id" : ObjectId("62388454970c29f593c31199"),
+        "movie_name" : "Backtrack (Catchfire)"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119a"),
+        "movie_name" : "Return of the Living Dead Part II"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119b"),
+        "movie_name" : "So Much Water"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119c"),
+        "movie_name" : "Like Water for Chocolate (Como agua para chocolate)"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119d"),
+        "movie_name" : "Vääpeli Körmy ja marsalkan sauva"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119e"),
+        "movie_name" : "Pacific Heights"
+}
+{ "_id" : ObjectId("62388454970c29f593c3119f"), "movie_name" : "Two Deaths" }
+{
+        "_id" : ObjectId("62388454970c29f593c311a0"),
+        "movie_name" : "Vengeance: The Story of Tony Cimo"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a1"),
+        "movie_name" : "Star Trek III: The Search for Spock"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a2"),
+        "movie_name" : "Young Master, The (Shi di chu ma)"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a3"),
+        "movie_name" : "Operación Cannabis"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a4"),
+        "movie_name" : "Seraphim Falls"
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a5"),
+        "movie_name" : "Malibu High"
+}
+{ "_id" : ObjectId("62388454970c29f593c311a6"), "movie_name" : "M" }
+{ "_id" : ObjectId("62388454970c29f593c311a7"), "movie_name" : "Home Fries" }
+{ "_id" : ObjectId("62388454970c29f593c311a8"), "movie_name" : "Last Exit" }
+Type "it" for more
+> db.assign.find({},{"movie_name":1,"production_year":1}).pretty()
+{
+        "_id" : ObjectId("62388454970c29f593c31195"),
+        "movie_name" : "Gasoline (Benzina)",
+        "production_year" : 1995
+}
+{
+        "_id" : ObjectId("62388454970c29f593c31196"),
+        "movie_name" : "Bill Bailey: Tinselworm",
+        "production_year" : 2011
+}
+{
+        "_id" : ObjectId("62388454970c29f593c31197"),
+        "movie_name" : "Human Centipede II (Full Sequence), The",
+        "production_year" : 2005
+}
+{
+        "_id" : ObjectId("62388454970c29f593c31198"),
+        "movie_name" : "True Crime",
+        "production_year" : 2003
+}
+{
+        "_id" : ObjectId("62388454970c29f593c31199"),
+        "movie_name" : "Backtrack (Catchfire)",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119a"),
+        "movie_name" : "Return of the Living Dead Part II",
+        "production_year" : 1996
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119b"),
+        "movie_name" : "So Much Water",
+        "production_year" : 2008
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119c"),
+        "movie_name" : "Like Water for Chocolate (Como agua para chocolate)",
+        "production_year" : 2003
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119d"),
+        "movie_name" : "Vääpeli Körmy ja marsalkan sauva",
+        "production_year" : 1994
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119e"),
+        "movie_name" : "Pacific Heights",
+        "production_year" : 2018
+}
+{
+        "_id" : ObjectId("62388454970c29f593c3119f"),
+        "movie_name" : "Two Deaths",
+        "production_year" : 2017
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a0"),
+        "movie_name" : "Vengeance: The Story of Tony Cimo",
+        "production_year" : 2007
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a1"),
+        "movie_name" : "Star Trek III: The Search for Spock",
+        "production_year" : 2000
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a2"),
+        "movie_name" : "Young Master, The (Shi di chu ma)",
+        "production_year" : 1990
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a3"),
+        "movie_name" : "Operación Cannabis",
+        "production_year" : 2013
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a4"),
+        "movie_name" : "Seraphim Falls",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a5"),
+        "movie_name" : "Malibu High",
+        "production_year" : 2017
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a6"),
+        "movie_name" : "M",
+        "production_year" : 2019
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a7"),
+        "movie_name" : "Home Fries",
+        "production_year" : 2016
+}
+{
+        "_id" : ObjectId("62388454970c29f593c311a8"),
+        "movie_name" : "Last Exit",
+        "production_year" : 2009
+}
+Type "it" for more
+> db.assign.find({},{"movie_name":1,"production_year":1,"_id":0}).pretty()
+{ "movie_name" : "Gasoline (Benzina)", "production_year" : 1995 }
+{ "movie_name" : "Bill Bailey: Tinselworm", "production_year" : 2011 }
+{
+        "movie_name" : "Human Centipede II (Full Sequence), The",
+        "production_year" : 2005
+}
+{ "movie_name" : "True Crime", "production_year" : 2003 }
+{ "movie_name" : "Backtrack (Catchfire)", "production_year" : 2020 }
+{
+        "movie_name" : "Return of the Living Dead Part II",
+        "production_year" : 1996
+}
+{ "movie_name" : "So Much Water", "production_year" : 2008 }
+{
+        "movie_name" : "Like Water for Chocolate (Como agua para chocolate)",
+        "production_year" : 2003
+}
+{
+        "movie_name" : "Vääpeli Körmy ja marsalkan sauva",
+        "production_year" : 1994
+}
+{ "movie_name" : "Pacific Heights", "production_year" : 2018 }
+{ "movie_name" : "Two Deaths", "production_year" : 2017 }
+{
+        "movie_name" : "Vengeance: The Story of Tony Cimo",
+        "production_year" : 2007
+}
+{
+        "movie_name" : "Star Trek III: The Search for Spock",
+        "production_year" : 2000
+}
+{
+        "movie_name" : "Young Master, The (Shi di chu ma)",
+        "production_year" : 1990
+}
+{ "movie_name" : "Operación Cannabis", "production_year" : 2013 }
+{ "movie_name" : "Seraphim Falls", "production_year" : 1998 }
+{ "movie_name" : "Malibu High", "production_year" : 2017 }
+{ "movie_name" : "M", "production_year" : 2019 }
+{ "movie_name" : "Home Fries", "production_year" : 2016 }
+{ "movie_name" : "Last Exit", "production_year" : 2009 }
+Type "it" for more
+> db.assing.find({},{"movie_name:1","production_years":1}).pretty()
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:33
+> db.assign.find({},{"movie_name":1,"production_year":1,"_id":0}).pretty()
+{ "movie_name" : "Gasoline (Benzina)", "production_year" : 1995 }
+{ "movie_name" : "Bill Bailey: Tinselworm", "production_year" : 2011 }
+{
+        "movie_name" : "Human Centipede II (Full Sequence), The",
+        "production_year" : 2005
+}
+{ "movie_name" : "True Crime", "production_year" : 2003 }
+{ "movie_name" : "Backtrack (Catchfire)", "production_year" : 2020 }
+{
+        "movie_name" : "Return of the Living Dead Part II",
+        "production_year" : 1996
+}
+{ "movie_name" : "So Much Water", "production_year" : 2008 }
+{
+        "movie_name" : "Like Water for Chocolate (Como agua para chocolate)",
+        "production_year" : 2003
+}
+{
+        "movie_name" : "Vääpeli Körmy ja marsalkan sauva",
+        "production_year" : 1994
+}
+{ "movie_name" : "Pacific Heights", "production_year" : 2018 }
+{ "movie_name" : "Two Deaths", "production_year" : 2017 }
+{
+        "movie_name" : "Vengeance: The Story of Tony Cimo",
+        "production_year" : 2007
+}
+{
+        "movie_name" : "Star Trek III: The Search for Spock",
+        "production_year" : 2000
+}
+{
+        "movie_name" : "Young Master, The (Shi di chu ma)",
+        "production_year" : 1990
+}
+{ "movie_name" : "Operación Cannabis", "production_year" : 2013 }
+{ "movie_name" : "Seraphim Falls", "production_year" : 1998 }
+{ "movie_name" : "Malibu High", "production_year" : 2017 }
+{ "movie_name" : "M", "production_year" : 2019 }
+{ "movie_name" : "Home Fries", "production_year" : 2016 }
+{ "movie_name" : "Last Exit", "production_year" : 2009 }
+Type "it" for more
+> db.assign.find({movie_name:{$eq:"movie_name"}},{"movie_name":1,"production_year":1,"_id":0}).pretty()
+> db.assign.find({movie_name:{$eq:"movie_name"}},{"movie_name":1,"production_year":1,"_id":0}).pretty()
+> db.assign.find({movie_name:{$nq:"movie_name"}},{"movie_name":1,"production_year":1,"_id":0}).pretty()
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "unknown operator: $nq",
+        "code" : 2,
+        "codeName" : "BadValue"
+}
+> db.assign.find({"movie_name":{$nq:"movie_name"}},{"movie_name":1,"production_year":1,"_id":0}).pretty()
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "unknown operator: $nq",
+        "code" : 2,
+        "codeName" : "BadValue"
+}
+> db.assign.find({"movie_name":{$nq:"movie_name"}},{"movie_name":1,"production_year":1,"_id":0}).pretty()
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "unknown operator: $nq",
+        "code" : 2,
+        "codeName" : "BadValue"
+}
+> db.assign.find({"movie_name":{$nq:"mo"}},{"movie_name":1,"production_year":1,"_id":0}).pretty()
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "unknown operator: $nq",
+        "code" : 2,
+        "codeName" : "BadValue"
+}
+> db.assign.find({"movie_name":{$ne:"mo"}},{"movie_name":1,"production_year":1,"_id":0}).pretty()
+{ "movie_name" : "Gasoline (Benzina)", "production_year" : 1995 }
+{ "movie_name" : "Bill Bailey: Tinselworm", "production_year" : 2011 }
+{
+        "movie_name" : "Human Centipede II (Full Sequence), The",
+        "production_year" : 2005
+}
+{ "movie_name" : "True Crime", "production_year" : 2003 }
+{ "movie_name" : "Backtrack (Catchfire)", "production_year" : 2020 }
+{
+        "movie_name" : "Return of the Living Dead Part II",
+        "production_year" : 1996
+}
+{ "movie_name" : "So Much Water", "production_year" : 2008 }
+{
+        "movie_name" : "Like Water for Chocolate (Como agua para chocolate)",
+        "production_year" : 2003
+}
+{
+        "movie_name" : "Vääpeli Körmy ja marsalkan sauva",
+        "production_year" : 1994
+}
+{ "movie_name" : "Pacific Heights", "production_year" : 2018 }
+{ "movie_name" : "Two Deaths", "production_year" : 2017 }
+{
+        "movie_name" : "Vengeance: The Story of Tony Cimo",
+        "production_year" : 2007
+}
+{
+        "movie_name" : "Star Trek III: The Search for Spock",
+        "production_year" : 2000
+}
+{
+        "movie_name" : "Young Master, The (Shi di chu ma)",
+        "production_year" : 1990
+}
+{ "movie_name" : "Operación Cannabis", "production_year" : 2013 }
+{ "movie_name" : "Seraphim Falls", "production_year" : 1998 }
+{ "movie_name" : "Malibu High", "production_year" : 2017 }
+{ "movie_name" : "M", "production_year" : 2019 }
+{ "movie_name" : "Home Fries", "production_year" : 2016 }
+{ "movie_name" : "Last Exit", "production_year" : 2009 }
+Type "it" for more
+> db.assign.find({"movie_name":{$eq:"pk"}},{"movie_name":1,"production_year":1,"_id":0}).pretty()
+> db.assign.find({"movie_name":{$eq:"pk"}},{"movie_name":1,"production_year":1,"_id":0}).pretty()
+> db.assign.find({"movie_name":{$eq:"Two Deaths"}},{"movie_name":1,"production_year":1,"_id":0}).pretty()
+{ "movie_name" : "Two Deaths", "production_year" : 2017 }
+> db.assign.find({"budget":{$gte":15000}},{"movie_name":1,"production_year":1,"_id":0}).pretty()
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:30
+> db.assign.find({"budget":{$gte":"15000"}},{"movie_name":1,"production_year":1,"_id":0}).pretty()
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:30
+> db.assign.find({"budget":{$gte:15000}},{"movie_name":1,"production_year":1,"_id":0}).pretty()
+{ "movie_name" : "Bill Bailey: Tinselworm", "production_year" : 2011 }
+{ "movie_name" : "True Crime", "production_year" : 2003 }
+{
+        "movie_name" : "Return of the Living Dead Part II",
+        "production_year" : 1996
+}
+{
+        "movie_name" : "Like Water for Chocolate (Como agua para chocolate)",
+        "production_year" : 2003
+}
+{
+        "movie_name" : "Vääpeli Körmy ja marsalkan sauva",
+        "production_year" : 1994
+}
+{ "movie_name" : "Pacific Heights", "production_year" : 2018 }
+{
+        "movie_name" : "Star Trek III: The Search for Spock",
+        "production_year" : 2000
+}
+{
+        "movie_name" : "Young Master, The (Shi di chu ma)",
+        "production_year" : 1990
+}
+{ "movie_name" : "Operación Cannabis", "production_year" : 2013 }
+{ "movie_name" : "Seraphim Falls", "production_year" : 1998 }
+{ "movie_name" : "Malibu High", "production_year" : 2017 }
+{ "movie_name" : "Home Fries", "production_year" : 2016 }
+{ "movie_name" : "Last Exit", "production_year" : 2009 }
+{ "movie_name" : "Undead, The", "production_year" : 2002 }
+{ "movie_name" : "The Girl from the Marsh Croft", "production_year" : 1999 }
+{ "movie_name" : "To Live and Die in L.A.", "production_year" : 1995 }
+{
+        "movie_name" : "Day The Earth Froze, The (Sampo)",
+        "production_year" : 1999
+}
+{ "movie_name" : "Winter Guest, The", "production_year" : 2020 }
+{ "movie_name" : "Hawking", "production_year" : 2004 }
+{
+        "movie_name" : "Little Indian, Big City (Un indien dans la ville)",
+        "production_year" : 2012
+}
+Type "it" for more
+> db.assign.find({"budget":{$lte:15000}},{"movie_name":1,"production_year":1,"_id":0}).pretty()
+{ "movie_name" : "Gasoline (Benzina)", "production_year" : 1995 }
+{
+        "movie_name" : "Human Centipede II (Full Sequence), The",
+        "production_year" : 2005
+}
+{ "movie_name" : "Backtrack (Catchfire)", "production_year" : 2020 }
+{ "movie_name" : "So Much Water", "production_year" : 2008 }
+{ "movie_name" : "Two Deaths", "production_year" : 2017 }
+{
+        "movie_name" : "Vengeance: The Story of Tony Cimo",
+        "production_year" : 2007
+}
+{ "movie_name" : "M", "production_year" : 2019 }
+{ "movie_name" : "La Planque", "production_year" : 2020 }
+{ "movie_name" : "This Could Be The Night", "production_year" : 1997 }
+{ "movie_name" : "So Normal (Normais, Os)", "production_year" : 1993 }
+{ "movie_name" : "Princess Ka'iulani", "production_year" : 1994 }
+{ "movie_name" : "Line of Sight", "production_year" : 1994 }
+{ "movie_name" : "Reign of Fire", "production_year" : 1991 }
+{ "movie_name" : "Mosquito Squadron", "production_year" : 2008 }
+{ "movie_name" : "Rails & Ties", "production_year" : 2017 }
+{ "movie_name" : "Storm", "production_year" : 2012 }
+{ "movie_name" : "Boy Meets Boy", "production_year" : 1996 }
+{ "movie_name" : "Pump Up the Volume", "production_year" : 1995 }
+{
+        "movie_name" : "Adventures of Priscilla, Queen of the Desert, The",
+        "production_year" : 2004
+}
+{ "movie_name" : "Bluebeard (Barbe Bleue)", "production_year" : 1993 }
+Type "it" for more
+> db.assign.find({"production_year":{$gt:2000}},{"movie_name":1,"production_year":1,"_id":0}).pretty()
+{ "movie_name" : "Bill Bailey: Tinselworm", "production_year" : 2011 }
+{
+        "movie_name" : "Human Centipede II (Full Sequence), The",
+        "production_year" : 2005
+}
+{ "movie_name" : "True Crime", "production_year" : 2003 }
+{ "movie_name" : "Backtrack (Catchfire)", "production_year" : 2020 }
+{ "movie_name" : "So Much Water", "production_year" : 2008 }
+{
+        "movie_name" : "Like Water for Chocolate (Como agua para chocolate)",
+        "production_year" : 2003
+}
+{ "movie_name" : "Pacific Heights", "production_year" : 2018 }
+{ "movie_name" : "Two Deaths", "production_year" : 2017 }
+{
+        "movie_name" : "Vengeance: The Story of Tony Cimo",
+        "production_year" : 2007
+}
+{ "movie_name" : "Operación Cannabis", "production_year" : 2013 }
+{ "movie_name" : "Malibu High", "production_year" : 2017 }
+{ "movie_name" : "M", "production_year" : 2019 }
+{ "movie_name" : "Home Fries", "production_year" : 2016 }
+{ "movie_name" : "Last Exit", "production_year" : 2009 }
+{ "movie_name" : "Undead, The", "production_year" : 2002 }
+{ "movie_name" : "La Planque", "production_year" : 2020 }
+{ "movie_name" : "Winter Guest, The", "production_year" : 2020 }
+{ "movie_name" : "Mosquito Squadron", "production_year" : 2008 }
+{ "movie_name" : "Rails & Ties", "production_year" : 2017 }
+{ "movie_name" : "Storm", "production_year" : 2012 }
+Type "it" for more
+> db.assign.find({"production_year":{$gt:2000},"budget":{$gt:10000}},{"movie_name":1,"production_year":1,"_id":0}).pretty()
+{ "movie_name" : "Bill Bailey: Tinselworm", "production_year" : 2011 }
+{
+        "movie_name" : "Human Centipede II (Full Sequence), The",
+        "production_year" : 2005
+}
+{ "movie_name" : "True Crime", "production_year" : 2003 }
+{ "movie_name" : "Backtrack (Catchfire)", "production_year" : 2020 }
+{ "movie_name" : "So Much Water", "production_year" : 2008 }
+{
+        "movie_name" : "Like Water for Chocolate (Como agua para chocolate)",
+        "production_year" : 2003
+}
+{ "movie_name" : "Pacific Heights", "production_year" : 2018 }
+{ "movie_name" : "Two Deaths", "production_year" : 2017 }
+{
+        "movie_name" : "Vengeance: The Story of Tony Cimo",
+        "production_year" : 2007
+}
+{ "movie_name" : "Operación Cannabis", "production_year" : 2013 }
+{ "movie_name" : "Malibu High", "production_year" : 2017 }
+{ "movie_name" : "M", "production_year" : 2019 }
+{ "movie_name" : "Home Fries", "production_year" : 2016 }
+{ "movie_name" : "Last Exit", "production_year" : 2009 }
+{ "movie_name" : "Undead, The", "production_year" : 2002 }
+{ "movie_name" : "Winter Guest, The", "production_year" : 2020 }
+{ "movie_name" : "Mosquito Squadron", "production_year" : 2008 }
+{ "movie_name" : "Hawking", "production_year" : 2004 }
+{
+        "movie_name" : "Little Indian, Big City (Un indien dans la ville)",
+        "production_year" : 2012
+}
+{ "movie_name" : "Skyscraper (Skyskraber)", "production_year" : 2009 }
+Type "it" for more
+> db.assign.find({$and:[{"production_year":{$gt:2000}},{"budget":{$gt:10000}}]},{"movie_name":1,"production_year":1,"_id":0}).pretty()
+{ "movie_name" : "Bill Bailey: Tinselworm", "production_year" : 2011 }
+{
+        "movie_name" : "Human Centipede II (Full Sequence), The",
+        "production_year" : 2005
+}
+{ "movie_name" : "True Crime", "production_year" : 2003 }
+{ "movie_name" : "Backtrack (Catchfire)", "production_year" : 2020 }
+{ "movie_name" : "So Much Water", "production_year" : 2008 }
+{
+        "movie_name" : "Like Water for Chocolate (Como agua para chocolate)",
+        "production_year" : 2003
+}
+{ "movie_name" : "Pacific Heights", "production_year" : 2018 }
+{ "movie_name" : "Two Deaths", "production_year" : 2017 }
+{
+        "movie_name" : "Vengeance: The Story of Tony Cimo",
+        "production_year" : 2007
+}
+{ "movie_name" : "Operación Cannabis", "production_year" : 2013 }
+{ "movie_name" : "Malibu High", "production_year" : 2017 }
+{ "movie_name" : "M", "production_year" : 2019 }
+{ "movie_name" : "Home Fries", "production_year" : 2016 }
+{ "movie_name" : "Last Exit", "production_year" : 2009 }
+{ "movie_name" : "Undead, The", "production_year" : 2002 }
+{ "movie_name" : "Winter Guest, The", "production_year" : 2020 }
+{ "movie_name" : "Mosquito Squadron", "production_year" : 2008 }
+{ "movie_name" : "Hawking", "production_year" : 2004 }
+{
+        "movie_name" : "Little Indian, Big City (Un indien dans la ville)",
+        "production_year" : 2012
+}
+{ "movie_name" : "Skyscraper (Skyskraber)", "production_year" : 2009 }
+Type "it" for more
+> db.assign.find({$or:[{"production_year":{$gt:2000}},{"budget":{$gt:10000}}]},{"movie_name":1,"production_year":1,"_id":0}).pretty()
+{ "movie_name" : "Gasoline (Benzina)", "production_year" : 1995 }
+{ "movie_name" : "Bill Bailey: Tinselworm", "production_year" : 2011 }
+{
+        "movie_name" : "Human Centipede II (Full Sequence), The",
+        "production_year" : 2005
+}
+{ "movie_name" : "True Crime", "production_year" : 2003 }
+{ "movie_name" : "Backtrack (Catchfire)", "production_year" : 2020 }
+{
+        "movie_name" : "Return of the Living Dead Part II",
+        "production_year" : 1996
+}
+{ "movie_name" : "So Much Water", "production_year" : 2008 }
+{
+        "movie_name" : "Like Water for Chocolate (Como agua para chocolate)",
+        "production_year" : 2003
+}
+{
+        "movie_name" : "Vääpeli Körmy ja marsalkan sauva",
+        "production_year" : 1994
+}
+{ "movie_name" : "Pacific Heights", "production_year" : 2018 }
+{ "movie_name" : "Two Deaths", "production_year" : 2017 }
+{
+        "movie_name" : "Vengeance: The Story of Tony Cimo",
+        "production_year" : 2007
+}
+{
+        "movie_name" : "Star Trek III: The Search for Spock",
+        "production_year" : 2000
+}
+{
+        "movie_name" : "Young Master, The (Shi di chu ma)",
+        "production_year" : 1990
+}
+{ "movie_name" : "Operación Cannabis", "production_year" : 2013 }
+{ "movie_name" : "Seraphim Falls", "production_year" : 1998 }
+{ "movie_name" : "Malibu High", "production_year" : 2017 }
+{ "movie_name" : "M", "production_year" : 2019 }
+{ "movie_name" : "Home Fries", "production_year" : 2016 }
+{ "movie_name" : "Last Exit", "production_year" : 2009 }
+Type "it" for more
+> db.assign.find({$nor:[{"production_year":{$gt:2000}},{"budget":{$gt:10000}}]},{"movie_name":1,"production_year":1,"_id":0}).pretty()
+{ "movie_name" : "Reign of Fire", "production_year" : 1991 }
+{ "movie_name" : "Bluebeard (Barbe Bleue)", "production_year" : 1993 }
+{ "movie_name" : "When a Man Loves a Woman", "production_year" : 1990 }
+{ "movie_name" : "Tombstone", "production_year" : 1998 }
+{ "movie_name" : "Fiancee, The (Parineeta)", "production_year" : 1992 }
+{ "movie_name" : "Kolka Cool", "production_year" : 1993 }
+{ "movie_name" : "Under Suspicion", "production_year" : 1992 }
+{ "movie_name" : "Munchies", "production_year" : 1993 }
+{ "movie_name" : "Looking for Lenny ", "production_year" : 2000 }
+{
+        "movie_name" : "Dementia (a.k.a. Daughter of Horror)",
+        "production_year" : 1993
+}
+{
+        "movie_name" : "Curse of the Demon (Night of the Demon)",
+        "production_year" : 2000
+}
+{
+        "movie_name" : "Empire of Passion (a.k.a. In the Realm of Passion) (a.k.a. Phantom Love) (Ai No Borei)",
+        "production_year" : 1996
+}
+{ "movie_name" : "Hair", "production_year" : 2000 }
+> db.assign.find({$or:[{"production_year":{$ne:2000}},{"budget":{$ne:10000}}]},{"movie_name":1,"production_year":1,"_id":0}).pretty()
+{ "movie_name" : "Gasoline (Benzina)", "production_year" : 1995 }
+{ "movie_name" : "Bill Bailey: Tinselworm", "production_year" : 2011 }
+{
+        "movie_name" : "Human Centipede II (Full Sequence), The",
+        "production_year" : 2005
+}
+{ "movie_name" : "True Crime", "production_year" : 2003 }
+{ "movie_name" : "Backtrack (Catchfire)", "production_year" : 2020 }
+{
+        "movie_name" : "Return of the Living Dead Part II",
+        "production_year" : 1996
+}
+{ "movie_name" : "So Much Water", "production_year" : 2008 }
+{
+        "movie_name" : "Like Water for Chocolate (Como agua para chocolate)",
+        "production_year" : 2003
+}
+{
+        "movie_name" : "Vääpeli Körmy ja marsalkan sauva",
+        "production_year" : 1994
+}
+{ "movie_name" : "Pacific Heights", "production_year" : 2018 }
+{ "movie_name" : "Two Deaths", "production_year" : 2017 }
+{
+        "movie_name" : "Vengeance: The Story of Tony Cimo",
+        "production_year" : 2007
+}
+{
+        "movie_name" : "Star Trek III: The Search for Spock",
+        "production_year" : 2000
+}
+{
+        "movie_name" : "Young Master, The (Shi di chu ma)",
+        "production_year" : 1990
+}
+{ "movie_name" : "Operación Cannabis", "production_year" : 2013 }
+{ "movie_name" : "Seraphim Falls", "production_year" : 1998 }
+{ "movie_name" : "Malibu High", "production_year" : 2017 }
+{ "movie_name" : "M", "production_year" : 2019 }
+{ "movie_name" : "Home Fries", "production_year" : 2016 }
+{ "movie_name" : "Last Exit", "production_year" : 2009 }
+Type "it" for more
+> db.assign.find({$and:[{"production_year":{$gte:2000}},{"production_year":{$lte:2010}}]},{"movie_name":1,"production_year":1,"_id":0}).pretty()
+{
+        "movie_name" : "Human Centipede II (Full Sequence), The",
+        "production_year" : 2005
+}
+{ "movie_name" : "True Crime", "production_year" : 2003 }
+{ "movie_name" : "So Much Water", "production_year" : 2008 }
+{
+        "movie_name" : "Like Water for Chocolate (Como agua para chocolate)",
+        "production_year" : 2003
+}
+{
+        "movie_name" : "Vengeance: The Story of Tony Cimo",
+        "production_year" : 2007
+}
+{
+        "movie_name" : "Star Trek III: The Search for Spock",
+        "production_year" : 2000
+}
+{ "movie_name" : "Last Exit", "production_year" : 2009 }
+{ "movie_name" : "Undead, The", "production_year" : 2002 }
+{ "movie_name" : "Mosquito Squadron", "production_year" : 2008 }
+{ "movie_name" : "Hawking", "production_year" : 2004 }
+{
+        "movie_name" : "Adventures of Priscilla, Queen of the Desert, The",
+        "production_year" : 2004
+}
+{ "movie_name" : "Skyscraper (Skyskraber)", "production_year" : 2009 }
+{ "movie_name" : "Nico Icon", "production_year" : 2002 }
+{ "movie_name" : "Attila Marcel", "production_year" : 2005 }
+{
+        "movie_name" : "There Will Be No Leave Today (Segodnya uvolneniya ne budet)",
+        "production_year" : 2006
+}
+{
+        "movie_name" : "Witching and Bitching (Brujas de Zugarramurdi, Las)",
+        "production_year" : 2000
+}
+{ "movie_name" : "Paths of Glory", "production_year" : 2003 }
+{ "movie_name" : "Endless Summer, The", "production_year" : 2010 }
+{ "movie_name" : "Informant", "production_year" : 2009 }
+{
+        "movie_name" : "Master, The (Huang Fei Hong jiu er zhi long xing tian xia)",
+        "production_year" : 2007
+}
+Type "it" for more
+> it
+{ "movie_name" : "Monster", "production_year" : 2002 }
+{ "movie_name" : "After Office Hours", "production_year" : 2002 }
+{ "movie_name" : "There Goes My Baby", "production_year" : 2003 }
+{ "movie_name" : "Splinterheads", "production_year" : 2008 }
+{ "movie_name" : "Trixie", "production_year" : 2001 }
+{ "movie_name" : "Hellraiser: Inferno", "production_year" : 2001 }
+{
+        "movie_name" : "Act in Question, The (Acto en cuestión, El)",
+        "production_year" : 2001
+}
+{
+        "movie_name" : "Wayward Cloud, The (Tian bian yi duo yun)",
+        "production_year" : 2006
+}
+{ "movie_name" : "The Man Without a Map", "production_year" : 2009 }
+{ "movie_name" : "Psych-Out", "production_year" : 2003 }
+{
+        "movie_name" : "Battered Bastards of Baseball, The",
+        "production_year" : 2003
+}
+{ "movie_name" : "Melvin and Howard", "production_year" : 2004 }
+{ "movie_name" : "Strul", "production_year" : 2009 }
+{ "movie_name" : "Revanche", "production_year" : 2009 }
+{
+        "movie_name" : "Sound of the Mountain (Thunder of the Mountain, The) (Yama no oto)",
+        "production_year" : 2003
+}
+{ "movie_name" : "Last Stop for Paul", "production_year" : 2007 }
+{ "movie_name" : "Honkytonk Man", "production_year" : 2009 }
+{ "movie_name" : "Mom and Dad Save the World", "production_year" : 2000 }
+{ "movie_name" : "Werner - Beinhart!", "production_year" : 2002 }
+{ "movie_name" : "Material Girls", "production_year" : 2000 }
+Type "it" for more
+> db.assign.find({$and:[{"production_year":{$gte:2000}},{"production_year":{$lte:2010}}]},{"movie_name":1,"production_year":1,"_id":0}).pretty()
+{
+        "movie_name" : "Human Centipede II (Full Sequence), The",
+        "production_year" : 2005
+}
+{ "movie_name" : "True Crime", "production_year" : 2003 }
+{ "movie_name" : "So Much Water", "production_year" : 2008 }
+{
+        "movie_name" : "Like Water for Chocolate (Como agua para chocolate)",
+        "production_year" : 2003
+}
+{
+        "movie_name" : "Vengeance: The Story of Tony Cimo",
+        "production_year" : 2007
+}
+{
+        "movie_name" : "Star Trek III: The Search for Spock",
+        "production_year" : 2000
+}
+{ "movie_name" : "Last Exit", "production_year" : 2009 }
+{ "movie_name" : "Undead, The", "production_year" : 2002 }
+{ "movie_name" : "Mosquito Squadron", "production_year" : 2008 }
+{ "movie_name" : "Hawking", "production_year" : 2004 }
+{
+        "movie_name" : "Adventures of Priscilla, Queen of the Desert, The",
+        "production_year" : 2004
+}
+{ "movie_name" : "Skyscraper (Skyskraber)", "production_year" : 2009 }
+{ "movie_name" : "Nico Icon", "production_year" : 2002 }
+{ "movie_name" : "Attila Marcel", "production_year" : 2005 }
+{
+        "movie_name" : "There Will Be No Leave Today (Segodnya uvolneniya ne budet)",
+        "production_year" : 2006
+}
+{
+        "movie_name" : "Witching and Bitching (Brujas de Zugarramurdi, Las)",
+        "production_year" : 2000
+}
+{ "movie_name" : "Paths of Glory", "production_year" : 2003 }
+{ "movie_name" : "Endless Summer, The", "production_year" : 2010 }
+{ "movie_name" : "Informant", "production_year" : 2009 }
+{
+        "movie_name" : "Master, The (Huang Fei Hong jiu er zhi long xing tian xia)",
+        "production_year" : 2007
+}
+Type "it" for more
+> db.assign.find({$and:[{},{"movie_name":1,"production_year":1,"_id":0}).sort({"production_year":-1,"movie_name":1}).pretty()
+...
+...
+>
+> db.assign.find({$and:[{"production_year":{$gte:2000}},{"production_year":{$lte:2010}}]},{"movie_name":1,"production_year":1,"_id":0}).pretty()
+{
+        "movie_name" : "Human Centipede II (Full Sequence), The",
+        "production_year" : 2005
+}
+{ "movie_name" : "True Crime", "production_year" : 2003 }
+{ "movie_name" : "So Much Water", "production_year" : 2008 }
+{
+        "movie_name" : "Like Water for Chocolate (Como agua para chocolate)",
+        "production_year" : 2003
+}
+{
+        "movie_name" : "Vengeance: The Story of Tony Cimo",
+        "production_year" : 2007
+}
+{
+        "movie_name" : "Star Trek III: The Search for Spock",
+        "production_year" : 2000
+}
+{ "movie_name" : "Last Exit", "production_year" : 2009 }
+{ "movie_name" : "Undead, The", "production_year" : 2002 }
+{ "movie_name" : "Mosquito Squadron", "production_year" : 2008 }
+{ "movie_name" : "Hawking", "production_year" : 2004 }
+{
+        "movie_name" : "Adventures of Priscilla, Queen of the Desert, The",
+        "production_year" : 2004
+}
+{ "movie_name" : "Skyscraper (Skyskraber)", "production_year" : 2009 }
+{ "movie_name" : "Nico Icon", "production_year" : 2002 }
+{ "movie_name" : "Attila Marcel", "production_year" : 2005 }
+{
+        "movie_name" : "There Will Be No Leave Today (Segodnya uvolneniya ne budet)",
+        "production_year" : 2006
+}
+{
+        "movie_name" : "Witching and Bitching (Brujas de Zugarramurdi, Las)",
+        "production_year" : 2000
+}
+{ "movie_name" : "Paths of Glory", "production_year" : 2003 }
+{ "movie_name" : "Endless Summer, The", "production_year" : 2010 }
+{ "movie_name" : "Informant", "production_year" : 2009 }
+{
+        "movie_name" : "Master, The (Huang Fei Hong jiu er zhi long xing tian xia)",
+        "production_year" : 2007
+}
+Type "it" for more
+> db.assign.find({},{"movie_name":1,"production_year":1,"_id":0}).sort({"production_year":-1,"movie_name":1}).pretty()
+{ "movie_name" : "Backtrack (Catchfire)", "production_year" : 2020 }
+{ "movie_name" : "Basic", "production_year" : 2020 }
+{ "movie_name" : "Courage Under Fire", "production_year" : 2020 }
+{
+        "movie_name" : "Cuckoo in a Dark Forest (Kukacka v temném lese) ",
+        "production_year" : 2020
+}
+{ "movie_name" : "Daredevil", "production_year" : 2020 }
+{ "movie_name" : "Fear of a Black Hat", "production_year" : 2020 }
+{ "movie_name" : "Good Morning, Vietnam", "production_year" : 2020 }
+{ "movie_name" : "Hideaway", "production_year" : 2020 }
+{ "movie_name" : "Innocence", "production_year" : 2020 }
+{
+        "movie_name" : "Jimi Hendrix: Hear My Train A Comin'",
+        "production_year" : 2020
+}
+{ "movie_name" : "La Planque", "production_year" : 2020 }
+{ "movie_name" : "Metropia", "production_year" : 2020 }
+{ "movie_name" : "North & South", "production_year" : 2020 }
+{ "movie_name" : "Rally On! (Ralliraita)", "production_year" : 2020 }
+{ "movie_name" : "Riddick", "production_year" : 2020 }
+{
+        "movie_name" : "Spy Kids 2: The Island of Lost Dreams",
+        "production_year" : 2020
+}
+{ "movie_name" : "Street Trash", "production_year" : 2020 }
+{ "movie_name" : "Trigun: Badlands Rumble", "production_year" : 2020 }
+{ "movie_name" : "Winter Guest, The", "production_year" : 2020 }
+{ "movie_name" : "Alatriste", "production_year" : 2019 }
+Type "it" for more
+> db.assign.find({},{"movie_name":1,"production_year":1,"_id":0}).sort({"production_year":-1,"movie_name":1}).skip(10).limit(5).pretty()
+{ "movie_name" : "La Planque", "production_year" : 2020 }
+{ "movie_name" : "Metropia", "production_year" : 2020 }
+{ "movie_name" : "North & South", "production_year" : 2020 }
+{ "movie_name" : "Rally On! (Ralliraita)", "production_year" : 2020 }
+{ "movie_name" : "Riddick", "production_year" : 2020 }
+>
